@@ -1,2 +1,2 @@
 # linux-git1
-[link](greetings.py)
+[greetings.py](greetings.py)
