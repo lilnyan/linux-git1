@@ -27,7 +27,7 @@ for index,file in enumerate(filenames):
         polyreg.fit(np.array(values.index).reshape(-1,1), np.array(values))
         proc_values[i] = polyreg.predict(np.array(values.index).reshape(-1,1))
     proc_values = np.concatenate(proc_values)
-    stats2.loc[index] = [index+1, file[10], np.max(proc_values), 
+    stats2.loc[index] = [file[8], file[10], np.max(proc_values), 
                           np.min(proc_values), np.mean(proc_values), np.std(proc_values)]
 
 print(stats2)
