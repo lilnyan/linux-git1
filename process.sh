@@ -1,6 +1,8 @@
 #!/bin/bash
+echo "Subject, Status, max, min, mean, std" >> stats1.csv
 for i in $(ls EEG_Dataset); do
-  echo "${i:0:7} №${i:8:1}"  
+  echo "${i:0:7} №${i:8:1}"
+  awk 
   printf "Status: "
 if [ ${i:10:1} -eq 0 ]; 
    then 
@@ -9,7 +11,8 @@ if [ ${i:10:1} -eq 0 ];
     echo "Interested" 
   fi
  printf "max value:  "
- echo $(cat EEG_Dataset/${i} | awk -F "," 'NR>1 {print $2}' | sort -nr | head -n1)
+ cat EEG_Dataset/${i} | awk -F "," 'NR>1 {print $2}' | sort -nr | head -n1
  printf "min value:  "
- echo $(cat EEG_Dataset/${i} | awk -F "," 'NR>1 {print $2}' | sort -nr | tail -n1)
+ cat EEG_Dataset/${i} | awk -F "," 'NR>1 {print $2}' | sort -nr | tail -n1
+
 done
