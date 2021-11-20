@@ -16,12 +16,12 @@ if [ -z "$id3" ]
 then
   if [ -z "$id2" ]
   then
-    id=id1
+    id=$(echo "id1")
   else
-    id=id2
+    id=$(echo "id2")
   fi
  else
-  id=id3
+  id=$(echo "id3")
 fi
 echo "EARLIEST $id"
 
