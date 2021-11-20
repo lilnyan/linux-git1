@@ -16,19 +16,19 @@ if [ -z "$id3" ]
 then
   if [ -z "$id2" ]
   then
-    id=$(echo $id1)
+    id=id1
   else
-    id=$(echo $id2)
+    id=id2
   fi
  else
-  id=$(echo $id3)
+  id=id3
 fi
 echo "EARLIEST $id"
 
 merge_status=$(curl -s "https://api.github.com/repos/datamove/linux-git2/pulls/$id" | jq '.merged_at')
 if [[ "$merge_status" == "null" ]]
 then
-echo "MERGED 0"
-else
 echo "MERGED 1"
+else
+echo "MERGED 0"
 fi
