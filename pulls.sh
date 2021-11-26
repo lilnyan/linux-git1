@@ -19,7 +19,9 @@ echo "EARLIEST $id"
 
 
 merge_status=$(curl -s "https://api.github.com/repos/datamove/linux-git2/pulls/$id" | jq '.merged_at')
-if [ "$merge_status" == "null" ]
+size=${#merge_status}
+echo "$size"
+if [ "$size" == 4 ]
 then
 echo "MERGED 0"
 else
