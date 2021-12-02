@@ -33,9 +33,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Run bash script
-	run: |
-     # make file runnable, might not be necessary
-     chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
-     # run script
-     "${GITHUB_WORKSPACE}/.github/script.sh"
+      - name: make file runnable
+	run: chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
+      
+      - name: run script
+        run: "${GITHUB_WORKSPACE}/.github/script.sh"
