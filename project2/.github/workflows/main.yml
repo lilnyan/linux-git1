@@ -25,6 +25,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+<<<<<<< HEAD:project2/.github/workflows/main.yml
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
@@ -38,3 +39,8 @@ jobs:
       
       - name: run script
         run: "${GITHUB_WORKSPACE}/project2/.github/script.sh"
+=======
+        run: chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
+      - name: Run a one-line script
+        run: "${GITHUB_WORKSPACE}/.github/script.sh"
+>>>>>>> bfddd38011bc5e886104ad7e3296b4d357c3b5fd:.github/workflows/main.yml
