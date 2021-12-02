@@ -34,7 +34,7 @@ jobs:
           echo test, and deploy your project.
 
       - name: make file runnable
-	run: chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
+	run: chmod +x "${GITHUB_WORKSPACE}/project2/.github/script.sh"
       
       - name: run script
-        run: "${GITHUB_WORKSPACE}/.github/script.sh"
+        run: "${GITHUB_WORKSPACE}/project2/.github/script.sh"
