@@ -20,8 +20,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-    		# make file runnable, might not be necessary
+    # make file runnable, might not be necessary
     chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
 
-    		# run script
+    # run script
     "${GITHUB_WORKSPACE}/.github/script.sh"
