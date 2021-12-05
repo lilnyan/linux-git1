@@ -9,8 +9,10 @@ do
 count="$(($count+`cat $j | wc -m`))"
 done
 count=`jq -n $count*100/$total_count`
-echo $i $count
+count=`echo "scale=4; $count/1" | bc`
+echo $i $count"%"
 done
 last_count=$(wc -m `find . -type f ! -name "*.*" -not -path '*/\.git/*'` | tail -1 | sed 's/ total.*//' | bc)
 last_count=`jq -n $last_count*100/$total_count`
-echo "without extension" $last_count
+last_count=`echo "scale=4; $last_count/1" | bc`
+echo "without extension" $last_count"%"

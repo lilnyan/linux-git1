@@ -25,15 +25,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo This action counts how many percent of a particular extension takes up
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-      - name: make file runnable
+      - name: make counter runnable
 	run: chmod +x "${GITHUB_WORKSPACE}/project2/.github/script.sh"
       
       - name: run script
