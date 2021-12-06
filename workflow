@@ -25,10 +25,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo This action counts how many percent of a particular extension takes up
-
-      - name: make counter runnable
-	run: chmod +x "${GITHUB_WORKSPACE}/project2/.github/script.sh"
-      
-      - name: run script
-        run: "${GITHUB_WORKSPACE}/project2/.github/script.sh"
+        run: chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
+      - name: Run a one-line script
+        run: "${GITHUB_WORKSPACE}/.github/script.sh"
